@@ -1,0 +1,56 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  color: #a10fa1;
+}
+
+.fondo {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.texto-fondo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #ff00ff;
+  font-size: 16px;
+  white-space: pre;
+  opacity: 0.2;
+  animation: scroll 10s linear infinite;
+}
+
+.mano {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  filter: brightness(1.5) saturate(1.2);
+}
+
+.mensaje {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(14, 174, 202);
+  text-shadow: 0 0 20px #9c219c;
+  animation: pulse 3s infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
